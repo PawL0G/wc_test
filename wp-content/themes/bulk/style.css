@@ -1071,7 +1071,7 @@ li.woocommerce-MyAccount-navigation-link.is-active a {
     margin-top: 5px;
 }
 
-.elementor-widget-container h5{
+.widget-container h5{
     padding-left: 20px;
 }
 
@@ -1124,7 +1124,7 @@ li.woocommerce-MyAccount-navigation-link.is-active a {
     color: #fff;
 }
 
-.elementor img {
+.img-post img {
     height: auto;
     width: 100%;
     border: none;
@@ -1136,5 +1136,99 @@ li.woocommerce-MyAccount-navigation-link.is-active a {
 .img-post{
     width: 100%;
     object-fit: cover;
-    height: 308px;
+}
+
+.widget-container{
+    padding-top: 3em;
+}
+
+@media (max-width: 991px){
+    .post-block{
+        width:  60%;
+        margin: 15px auto;
+    }
+
+    .service-block{
+        width:  60%;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 520px){
+    .post-block{
+        width:  100%;
+    }
+
+    .banner img {
+        height: 18vh !important;
+    }
+
+    .service-block{
+        width:  100%;
+    }
+
+    .single-image img{
+        object-fit: cover;
+    }
+}
+
+.container.services{
+    padding-bottom: 8em;
+}
+
+.latest-post{
+    padding-top: 3.5em;
+    padding-bottom: 5em;
+}
+
+.content-services p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.service-heading{
+    font-weight: 600;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: block;
+    text-align: center;
+    color: #070f35;
+}
+
+.content-services {
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #070f35;
+    padding: 20px;
+}
+
+.content-services h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.service-block{
+    height: 100%;
+    background: transparent;
+}
+
+.banner img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.img-service {
+    width: 83px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+.bg-home{
+    background: #ebf0f6;
 }

@@ -8,16 +8,25 @@
 		</div>
 	<?php endif; ?>
 	<header class="header-title container">
-		<h1 class="page-header">                                
-
+		<h1 class="page-header">
 		</h1>
 		<?php do_action( 'bulk_after_page_title' ); ?>
 	</header>
 </div>
 
-<?php get_template_part( 'template-parts/template-part', 'content' ); ?>
-<!-- start content container -->
-<?php get_template_part( 'content', 'page' ); ?>
-<!-- end content container -->
+<?php get_template_part( 'template-parts/template-part', 'services' ); ?>
+
+<?php
+
+$image = get_field('main_home', 'getha');
+
+if( !empty($image) ): ?>
+
+    <div class="banner"><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
+
+<?php endif; ?>
+
+<?php get_template_part( 'template-parts/template', 'homepage' ); ?>
+
 
 <?php get_footer(); ?>

@@ -1,0 +1,24 @@
+2020-06-29T20:55:00+00:00 CRITICAL Uncaught Error: Call to undefined function acf_get_options_pages() in F:\OSPanel\domains\testit\wp-content\plugins\options-page-admin-for-acf\options-pages.php:1020
+Stack trace:
+#0 F:\OSPanel\domains\testit\wp-includes\class-wp-hook.php(287): acfOptionsPageAdder->build_admin_menu_list('')
+#1 F:\OSPanel\domains\testit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 F:\OSPanel\domains\testit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 F:\OSPanel\domains\testit\wp-admin\includes\menu.php(155): do_action('admin_menu', '')
+#4 F:\OSPanel\domains\testit\wp-admin\menu.php(326): require_once('F:\\OSPanel\\doma...')
+#5 F:\OSPanel\domains\testit\wp-admin\admin.php(153): require('F:\\OSPanel\\doma...')
+#6 F:\OSPanel\domains\testit\wp-admin\plugins.php(10): require_once('F:\\OSPanel\\doma...')
+#7 {main}
+  thrown in F:\OSPanel\domains\testit\wp-content\plugins\options-page-admin-for-acf\options-pages.php on line 1020
+
+2020-06-29T20:55:04+00:00 CRITICAL Uncaught Error: Call to undefined function acf_get_options_pages() in F:\OSPanel\domains\testit\wp-content\plugins\options-page-admin-for-acf\options-pages.php:1020
+Stack trace:
+#0 F:\OSPanel\domains\testit\wp-includes\class-wp-hook.php(287): acfOptionsPageAdder->build_admin_menu_list('')
+#1 F:\OSPanel\domains\testit\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#2 F:\OSPanel\domains\testit\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 F:\OSPanel\domains\testit\wp-admin\includes\menu.php(155): do_action('admin_menu', '')
+#4 F:\OSPanel\domains\testit\wp-admin\menu.php(326): require_once('F:\\OSPanel\\doma...')
+#5 F:\OSPanel\domains\testit\wp-admin\admin.php(153): require('F:\\OSPanel\\doma...')
+#6 F:\OSPanel\domains\testit\wp-admin\plugins.php(10): require_once('F:\\OSPanel\\doma...')
+#7 {main}
+  thrown in F:\OSPanel\domains\testit\wp-content\plugins\options-page-admin-for-acf\options-pages.php on line 1020
+

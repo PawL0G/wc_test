@@ -387,3 +387,54 @@ if ( ! function_exists( 'wp_body_open' ) ) :
     }
 endif;
 
+
+
+function getha_services() {
+    register_post_type( 'services',
+        array(
+            'labels' => array(
+                'name' => __( 'Services' ),
+                'singular_name' => __( 'Services' ),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'services'),
+            'show_in_rest' => true,
+            'menu_icon' => 'dashicons-admin-tools'
+        )
+    );
+}
+
+add_action( 'init', 'getha_services' );
+
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page(array(
+        'page_title' 	=> 'Getha Theme General Settings',
+        'menu_title'	=> 'Getha Theme Settings',
+        'menu_slug' 	=> 'theme-general-settings',
+        'capability'	=> 'edit_posts',
+        'post_id'       => 'getha',
+        'redirect'		=> false
+    ));
+
+}
+
+
+add_filter('the_content', 'mte_remove_unused_shortcode');
+function mte_remove_unused_shortcode($content)
+{ $pattern = mte_get_unused_shortcode_regex();
+    $content = preg_replace_callback( '/'. $pattern .'/s', 'strip_shortcode_tag', $content );
+    return $content;
+}
+
+function mte_get_unused_shortcode_regex() {
+    global $shortcode_tags;
+    $tagnames = array_keys($shortcode_tags);
+    $tagregexp = join( '|', array_map('preg_quote', $tagnames) );
+    $regex = '\[(\[?)';
+    $regex .= "(?!$tagregexp)";
+    $regex .= '\b([^\]\/]*(?:\/(?!\])[^\]\/]*)*?)(?:(\/)\]|\](?:([^\[]*+(?:\[(?!\/\2\])[^\[]*+)*+)\[\/\2\])?)(\]?)';
+    return $regex;
+}
